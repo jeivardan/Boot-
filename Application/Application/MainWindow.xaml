@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Application"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="622.667" Width="456.666">
+    <Grid Margin="0,0,-7,0" HorizontalAlignment="Left" Width="457" Height="592" VerticalAlignment="Top">
+        <Label Content="-----------------------------------DRIVE PROPERTIES-----------------------------------------------------------------" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="447"/>
+        <Label Content=" Device&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,36,0,0" Width="55" Height="26"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="412" Margin="18,62,0,0"/>
+        <Label Content=" Boot Selection" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.544,4.321" Margin="10,94,0,0"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="301" Margin="18,125,0,0"/>
+        <Button Content="SELECT&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="355,125,0,0" Height="21"/>
+        <Label Content=" Partition Scheme" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,162,0,0"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="183" Margin="18,193,0,0"/>
+        <Label Content=" Target System" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="267,162,0,0"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="154" Margin="276,193,0,0"/>
+        <Label Content="-----------------------------------Format Options-----------------------------------------------------------------" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,233,0,0" Width="447"/>
+        <Label Content=" Volume Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,273,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="412" Margin="18,304,0,0"/>
+        <Label Content=" File System" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,336,0,0"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="18,367,0,0"/>
+        <Label Content="---------------------------------------Status-----------------------------------------------------------------" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,394,0,0" Width="447"/>
+        <ProgressBar HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="412" Margin="18,458,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.978,3.2" Margin="267,511,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="355,510,0,0"/>
     </Grid>
 </Window>
