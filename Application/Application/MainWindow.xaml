@@ -5,26 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Application"
         mc:Ignorable="d"
-        Title="MainWindow" Height="622.667" Width="456.666">
+        Title="MainWindow" Height="622.667" Width="456.666" Background="#2f2f2f">
     <Grid Margin="0,0,-7,0" HorizontalAlignment="Left" Width="457" Height="592" VerticalAlignment="Top">
-        <Label Content="-----------------------------------DRIVE PROPERTIES-----------------------------------------------------------------" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="447"/>
-        <Label Content=" Device&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,36,0,0" Width="55" Height="26"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="412" Margin="18,62,0,0"/>
-        <Label Content=" Boot Selection" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.544,4.321" Margin="10,94,0,0"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="301" Margin="18,125,0,0"/>
-        <Button Content="SELECT&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="355,125,0,0" Height="21"/>
-        <Label Content=" Partition Scheme" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,162,0,0"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="183" Margin="18,193,0,0"/>
-        <Label Content=" Target System" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="267,162,0,0"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="154" Margin="276,193,0,0"/>
-        <Label Content="-----------------------------------Format Options-----------------------------------------------------------------" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,233,0,0" Width="447"/>
-        <Label Content=" Volume Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,273,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="412" Margin="18,304,0,0"/>
-        <Label Content=" File System" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,336,0,0"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="18,367,0,0"/>
-        <Label Content="---------------------------------------Status-----------------------------------------------------------------" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,394,0,0" Width="447"/>
-        <ProgressBar HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="412" Margin="18,458,0,0"/>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.978,3.2" Margin="267,511,0,0"/>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="355,510,0,0"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Foreground="White" Content="-----------------------------------DRIVE PROPERTIES-----------------------------------------------------------------" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="447" Grid.ColumnSpan="2"/>
+
+        <Label Content=" Device&#xD;&#xA;" HorizontalAlignment="Left" Foreground="White" VerticalAlignment="Top" Margin="10,36,0,0" Width="55" Height="26" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="device" HorizontalAlignment="Left" VerticalAlignment="Top" Width="366" Margin="18,62,0,0" Grid.ColumnSpan="2"/>
+        <Label Foreground="White" Content=" Boot Selection" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.544,4.321" Margin="10,94,0,0" Grid.ColumnSpan="2"/>
+        <Button Content="SELECT&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="355,125,0,0" Height="21" Click="Button_Click" Grid.Column="1"/>
+        <Label Foreground="White" Content=" Partition Scheme" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,162,0,0" Grid.ColumnSpan="2"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="183" Margin="18,193,0,0" Grid.ColumnSpan="2"/>
+        <Label Foreground="White" Content=" Target System" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="267,162,0,0" Grid.ColumnSpan="2"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="154" Margin="276,193,0,0" Grid.ColumnSpan="2"/>
+        <Label Foreground="White" Content="-----------------------------------Format Options-----------------------------------------------------------------" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,233,0,0" Width="447" Grid.ColumnSpan="2"/>
+        <Label Foreground="White" Content=" Volume Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,273,0,0" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="412" Margin="18,304,0,0" TextChanged="TextBox_TextChanged" Grid.ColumnSpan="2"/>
+        <Label Foreground="White" Content=" File System" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,336,0,0" Grid.ColumnSpan="2"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="18,367,0,0" Grid.ColumnSpan="2"/>
+        <Label Foreground="White" Content="---------------------------------------Status-----------------------------------------------------------------" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,394,0,0" Width="447" Grid.ColumnSpan="2"/>
+        <ProgressBar Foreground="White" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="412" Margin="18,458,0,0" Grid.ColumnSpan="2"/>
+        <Button Content="START" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.978,3.2" Margin="267,511,0,0" Grid.ColumnSpan="2"/>
+        <Button Content="CLOSE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="355,510,0,0" Grid.Column="1"/>
+        <Label Foreground="White" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,566,0,0" Width="355" Grid.ColumnSpan="2"/>
+        <Label Foreground="White" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="355,566,0,0" Width="92" Grid.Column="1"/>
+        <Button Content="&lt;&gt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="25" Margin="405,64,0,0" RenderTransformOrigin="0.288,3.483" Click="Button_Click_1" Grid.Column="1"/>
+        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="324" Margin="18,125,0,0" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
